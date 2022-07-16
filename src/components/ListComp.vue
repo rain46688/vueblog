@@ -1,6 +1,6 @@
 <template>
   <div v-for="(data, num) in blog" :key="num">
-    <h5>{{data.title}}</h5>
+    <router-link :to="{ name: 'Detail', params: { number: data.number }}">{{data.title}}</router-link>
     <p>{{data.date}}</p>
   </div>
 </template>
