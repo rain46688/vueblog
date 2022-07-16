@@ -40,22 +40,31 @@
 <br/>
 
 <div class="contatiner mt-4">
-  <h5>제목</h5>
-  <p>제목2</p>
+  <h3>내 블로그 제목</h3>
+  <p>간단한 뷰로 만든 블로그입니다.</p>
 </div>
 
-<ListComp/>
+<br/>
+
+<ListComp :blog = 'blog'/>
 
 </template>
 
 <script>
 
 import ListComp from './components/ListComp.vue';
+import blog from './assets/blog.js';
 
 export default {
   name: 'App',
   components: {
     ListComp,
+  },
+  data(){
+    return{
+      blog : blog,
+
+    }
   }
 }
 </script>
